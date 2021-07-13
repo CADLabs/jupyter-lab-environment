@@ -9,19 +9,15 @@ Download and install Docker. The simplest option for Windows and macOS users is 
 
 ## Starting the Environment
 
-Using Make, or copy and paste the commented scripts.
-
 ```bash
-# Pull the Docker image, and run from project workspace directory:
-# docker run -it --rm -p 8888:8888 -v "${PWD}":/home/jovyan/work cadlabsorg/jupyter-lab-environment:latest
-make run
+# Pull the Docker image, and run from within the project workspace directory:
+docker run -it --rm -p 8888:8888 -v "${PWD}":/home/jovyan/work cadlabsorg/jupyter-lab-environment
 ```
 
 ## Building the Environment from Scratch
 
 ```bash
-# docker build -t cadlabsorg/jupyter-lab-environment:latest .
-make build
+docker build -t cadlabsorg/jupyter-lab-environment:latest .
 ```
 
 See [Makefile](Makefile) for additional scripts.
